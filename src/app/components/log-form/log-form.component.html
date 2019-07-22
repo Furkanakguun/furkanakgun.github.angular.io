@@ -1,0 +1,12 @@
+<div class="card card-body mb-3 ">
+    <form (ngSubmit)='onSubmit()'>
+        <div class="form-group fo mb-3">
+            <input type="text" name="text" [(ngModel)]="text" class="form-control form-control-lg" placeholder="Add a log...">
+        </div>
+        <div class="btn-toolbar">
+            <input type="submit" value="Add Log" class="btn btn-success" [disabled]=!this.text> 
+            <button (click)="ClearState()" type="button" class="btn btn-warning" [disabled]=!this.text>Clear</button>
+            <button (click)="onSubmitUpdate()" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Update button that update selected log" [disabled]=!this.text>Update</button>
+        </div>
+    </form>
+</div>
